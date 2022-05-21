@@ -1,4 +1,21 @@
-.content{
-    height: 100vh;
-    background-color: rgb(178, 97, 97);
+.content {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  padding: 150px;
+  background-image: url("../../../../assets/img/bg-home.jpg");
+  background-color: #3b0c0c; /* Used if the image is unavailable */
+  background-position: center;
+  background-size:cover;
+  height: 100vh;
+  overflow: hidden;
+
+  &__title {
+
+    padding-bottom: 30px;
+  }
+
+  &__image {
+    padding: 50px;
+  }
 }
