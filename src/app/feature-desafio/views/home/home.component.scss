@@ -1,21 +1,22 @@
 .content {
   color: white;
+  text-shadow: 3px 3px 5px black;
   text-align: center;
-  font-size: 30px;
-  padding: 150px;
-  background-image: url("../../../../assets/img/bg-home.jpg");
+  font-size: 25px;
+  padding: 20px 150px 20px 150px;
+  background-image: url("../../../../assets/img/bg-home2.jpg");
   background-color: #3b0c0c; /* Used if the image is unavailable */
   background-position: center;
   background-size:cover;
-  height: 100vh;
   overflow: hidden;
 
   &__title {
-
+    text-shadow: 5px 5px 2px black;
+    font-weight: bold;
     padding-bottom: 30px;
   }
 
   &__image {
-    padding: 50px;
+    padding: 20px;
   }
 }
