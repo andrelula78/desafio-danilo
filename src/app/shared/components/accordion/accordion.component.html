@@ -1,0 +1,102 @@
+<div class="container">
+    <h4>PIPE QUE FORMATA CPF E CNPJ</h4>
+    <div class="accordion" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            Clique para inserir o CPF/CNPJ
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <h5>Insira o cpf/cnpj que deseja formatar:</h5>
+            <div class="pipe-content">
+              <div>
+                <label for="cpf"></label>
+                <input
+                  type="number"
+                  class="pipe__input"
+                  [(ngModel)]="inputData"
+                />
+              </div>
+
+              <div *ngIf="resultado">
+                <p class="pipe__input-resultado">{{ inputData | cpfCnpj }}</p>
+              </div>
+
+              <div *ngIf="!resultado">
+                <p class="pipe__input-resultado">{{ inputData }}</p>
+              </div>
+
+              <button class="btn" (click)="mostrarResultado1()">
+                Formatar/Limpar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4>PIPE QUE INVERTE MAIÚSCULAS EM MINÚSCULAS (VICE-VERSA)</h4>
+    <div class="accordion" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingtwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            Clique para inserir o TEXTO:
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <h5>Insira o texto que deseja formatar:</h5>
+            <div class="pipe-content">
+              <div>
+                <label for="cpf"></label>
+                <input
+                  type="text"
+                  class="pipe__input"
+                  [(ngModel)]="inputText"
+                />
+              </div>
+
+              <div *ngIf="resultado2">
+                <p class="pipe__input-resultado">
+                  {{ inputText | invertCase }}
+                </p>
+              </div>
+
+              <div *ngIf="!resultado2">
+                <p class="pipe__input-resultado">{{ inputText }}</p>
+              </div>
+
+              <button class="btn" (click)="mostrarResultado2()">
+                Formatar/Limpar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
